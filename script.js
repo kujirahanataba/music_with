@@ -56,7 +56,7 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "DISC2の曲3",
+    title: "ニヒリスト",
     src: "songs/song8.mp3",
     image: "images/song6.JPG"
   },

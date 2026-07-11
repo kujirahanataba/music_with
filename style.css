@@ -1,37 +1,534 @@
+/* =========================
+   全体設定
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
-  background: #f5f5f5;
-  font-family: sans-serif;
-  color: #333;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  transition:
+    background-color 0.7s ease,
+    color 0.7s ease;
 }
 
-.player {
-  width: 90%;
-  max-width: 500px;
-  margin: 50px auto;
-  text-align: center;
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-}
-
-.jacket {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 20px;
+button,
+input {
+  font: inherit;
 }
 
 button {
-  padding: 12px 18px;
-  margin: 10px;
-  font-size: 18px;
-  border: none;
-  border-radius: 999px;
-  background: #333;
-  color: white;
+  -webkit-tap-highlight-color: transparent;
 }
 
-#song-title {
-  margin-top: 20px;
+
+/* =========================
+   表示・非表示
+========================= */
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================
+   パスワード画面
+========================= */
+
+.password-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  background-color: #111111;
+  color: #ffffff;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+
+.password-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.password-box {
+  width: min(86vw, 360px);
+
+  text-align: center;
+
+  transform: translateY(-20px);
+}
+
+.key-icon {
+  margin-bottom: 22px;
+
+  font-size: 34px;
+  line-height: 1;
+}
+
+.password-title {
+  margin: 0 0 30px;
+
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+}
+
+.password-form {
+  width: 100%;
+}
+
+.password-input-area {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.password-input {
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 10px 4px;
+
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 0;
+
+  outline: none;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-size: 18px;
+  letter-spacing: 0.14em;
+
+  appearance: none;
+}
+
+.password-input:focus {
+  border-bottom-color: #ffffff;
+}
+
+.password-submit {
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+
+  background-color: transparent;
+  color: #ffffff;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.password-submit:hover {
+  background-color: #ffffff;
+  color: #111111;
+
+  transform: scale(1.06);
+}
+
+.password-submit:active {
+  transform: scale(0.94);
+}
+
+.password-error {
+  min-height: 22px;
+
+  margin: 14px 0 0;
+
+  color: #d8d8d8;
+
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+
+/* パスワード間違い時の揺れ */
+.password-box.shake {
+  animation: shake 0.35s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-6px, -20px);
+  }
+
+  25% {
+    transform: translate(6px, -20px);
+  }
+
+  50% {
+    transform: translate(-4px, -20px);
+  }
+
+  75% {
+    transform: translate(4px, -20px);
+  }
+
+  100% {
+    transform: translate(0, -20px);
+  }
+}
+
+
+/* =========================
+   DISC 1：黒
+========================= */
+
+body.disc1-theme {
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
+
+.disc1-theme .player {
+  background-color: #181818;
+  color: #ffffff;
+
+  border-color: #333333;
+}
+
+.disc1-theme .buttons button {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.disc1-theme .disc-btn {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.disc1-theme .disc-btn.active {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+
+/* =========================
+   DISC 2：白
+========================= */
+
+body.disc2-theme {
+  background-color: #f4f4f4;
+  color: #111111;
+}
+
+.disc2-theme .player {
+  background-color: #ffffff;
+  color: #111111;
+
+  border-color: #dddddd;
+}
+
+.disc2-theme .buttons button {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.disc2-theme .disc-btn {
+  border-color: #111111;
+  color: #111111;
+}
+
+.disc2-theme .disc-btn.active {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+
+/* =========================
+   プレイヤー
+========================= */
+
+.player {
+  width: min(90vw, 420px);
+
+  padding: 30px 24px;
+
+  border: 1px solid;
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+
+  animation: playerFadeIn 0.7s ease;
+
+  transition:
+    background-color 0.7s ease,
+    color 0.7s ease,
+    border-color 0.7s ease;
+}
+
+@keyframes playerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.player-title {
+  margin: 0 0 22px;
+
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   DISC切り替えボタン
+========================= */
+
+.disc-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.disc-btn {
+  padding: 9px 20px;
+
+  border: 1px solid;
+  border-radius: 999px;
+
+  background-color: transparent;
+
+  font-size: 12px;
+  letter-spacing: 0.1em;
+
+  cursor: pointer;
+  opacity: 0.5;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.disc-btn:hover {
+  opacity: 0.85;
+}
+
+.disc-btn.active {
+  opacity: 1;
+
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   曲ごとの写真
+========================= */
+
+.jacket {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.jacket.changing {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   曲名
+========================= */
+
+.song-title {
+  min-height: 34px;
+
+  margin: 22px 0 18px;
+
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   再生ボタン
+========================= */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 18px;
+}
+
+.buttons button {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.7s ease,
+    color 0.7s ease;
+}
+
+.buttons button:hover {
+  transform: scale(1.08);
+}
+
+.buttons button:active {
+  transform: scale(0.94);
+}
+
+#play-btn {
+  width: 64px;
+  height: 64px;
+
+  font-size: 24px;
+}
+
+
+/* =========================
+   曲番号・DISC番号
+========================= */
+
+.song-number {
+  margin: 20px 0 6px;
+
+  font-size: 13px;
+  letter-spacing: 0.08em;
+
+  opacity: 0.65;
+}
+
+.disc-number {
+  margin: 0;
+
+  font-size: 11px;
+  letter-spacing: 0.3em;
+
+  opacity: 0.5;
+}
+
+
+/* =========================
+   スマホ向け
+========================= */
+
+@media (max-width: 480px) {
+  body {
+    align-items: center;
+  }
+
+  .player {
+    width: 92vw;
+
+    padding: 24px 18px;
+
+    border-radius: 20px;
+  }
+
+  .player-title {
+    font-size: 20px;
+  }
+
+  .song-title {
+    font-size: 20px;
+  }
+
+  .disc-btn {
+    padding: 8px 17px;
+  }
+
+  .buttons {
+    gap: 14px;
+  }
+
+  .buttons button {
+    width: 50px;
+    height: 50px;
+  }
+
+  #play-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .password-box {
+    width: min(82vw, 320px);
+  }
 }

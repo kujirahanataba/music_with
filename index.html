@@ -2,28 +2,162 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Music Player</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main class="player">
-    <h1>Music Player</h1>
 
-    <img id="jacket" src="images/song1.jpg" class="jacket" alt="ジャケット画像">
+<body class="disc1-theme">
 
-    <h2 id="song-title">me not me</h2>
+  <!-- =========================
+       パスワード画面
+  ========================== -->
+  <section id="password-screen" class="password-screen">
 
-    <audio id="audio"></audio>
+    <div class="password-box">
 
-    <div class="buttons">
-      <button onclick="prevSong()">⏮</button>
-      <button onclick="togglePlay()" id="play-btn">▶</button>
-      <button onclick="nextSong()">⏭</button>
+      <div class="key-icon">🔑</div>
+
+      <h1 class="password-title">
+        パスワード
+      </h1>
+
+      <form id="password-form" class="password-form">
+
+        <div class="password-input-area">
+
+          <input
+            id="password-input"
+            class="password-input"
+            type="password"
+            autocomplete="off"
+            aria-label="パスワード"
+          >
+
+          <button
+            type="submit"
+            class="password-submit"
+            aria-label="パスワードを送信"
+          >
+            →
+          </button>
+
+        </div>
+
+        <p
+          id="password-error"
+          class="password-error"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
     </div>
 
-    <p id="song-number"></p>
+  </section>
+
+
+  <!-- =========================
+       音楽プレイヤー
+  ========================== -->
+  <main id="player" class="player hidden">
+
+    <h1 class="player-title">
+      Music Player
+    </h1>
+
+    <!-- DISC切り替え -->
+    <div class="disc-buttons">
+
+      <button
+        id="disc1-btn"
+        class="disc-btn active"
+        type="button"
+        onclick="changeDisc(1)"
+      >
+        DISC 1
+      </button>
+
+      <button
+        id="disc2-btn"
+        class="disc-btn"
+        type="button"
+        onclick="changeDisc(2)"
+      >
+        DISC 2
+      </button>
+
+    </div>
+
+
+    <!-- 曲ごとに切り替わる写真 -->
+    <img
+      id="jacket"
+      class="jacket"
+      src="images/song1.jpg"
+      alt="me not meの画像"
+    >
+
+
+    <!-- 曲名 -->
+    <h2 id="song-title" class="song-title">
+      me not me
+    </h2>
+
+
+    <!-- 音源 -->
+    <audio id="audio"></audio>
+
+
+    <!-- 再生操作 -->
+    <div class="buttons">
+
+      <button
+        type="button"
+        onclick="prevSong()"
+        aria-label="前の曲"
+      >
+        ⏮
+      </button>
+
+      <button
+        id="play-btn"
+        type="button"
+        onclick="togglePlay()"
+        aria-label="再生または一時停止"
+      >
+        ▶
+      </button>
+
+      <button
+        type="button"
+        onclick="nextSong()"
+        aria-label="次の曲"
+      >
+        ⏭
+      </button>
+
+    </div>
+
+
+    <!-- 曲番号 -->
+    <p id="song-number" class="song-number">
+      1 / 5
+    </p>
+
+    <!-- DISC番号 -->
+    <p id="disc-number" class="disc-number">
+      DISC 1
+    </p>
+
   </main>
+
 
   <script src="script.js"></script>
 </body>

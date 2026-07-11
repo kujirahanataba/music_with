@@ -14,7 +14,7 @@ const disc1Songs = [
   {
     title: "me not me",
     src: "songs/song1.mp3",
-    image: "images/IMG_8865.JPG"
+    image: "images/IMG_8865.JPG?v=2"
   },
   {
     title: "詩的表現",

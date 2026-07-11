@@ -14,7 +14,7 @@ const disc1Songs = [
   {
     title: "me not me",
     src: "songs/song1.mp3",
-    image: "images/song1.JPG"
+    image: "images/song1.jpg"
   },
   {
     title: "詩的表現",
@@ -66,7 +66,7 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "DISC2の曲5",
+    title: "日のひかり",
     src: "songs/song10.mp3",
     image: "images/song10.jpg"
   }

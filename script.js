@@ -58,7 +58,7 @@ const disc2Songs = [
   {
     title: "光より",
     src: "songs/song8.mp3",
-    image: "images/song6.JPG"
+    image: "images/song4.JPG"
   },
   {
     title: "感覚は",

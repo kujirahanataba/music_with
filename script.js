@@ -56,7 +56,7 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "ニヒリスト",
+    title: "光より",
     src: "songs/song8.mp3",
     image: "images/song6.JPG"
   },
@@ -66,9 +66,9 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "日のひかり",
-    src: "songs/song10.mp3",
-    image: "images/song10.jpg"
+    title: "プラグマ",
+    src: "songs/cul 6.mp3",
+    image: "images/song6.JPG"
   }
 ];
 

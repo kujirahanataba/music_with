@@ -47,7 +47,7 @@ const disc1Songs = [
 const disc2Songs = [
   {
     title: "イリヤ",
-    src: "songs/iriya 7.mp3",
+    src: "songs/iriya 8.mp3",
     image: "images/song6.JPG"
   },
   {

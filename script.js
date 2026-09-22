@@ -46,13 +46,13 @@ const disc1Songs = [
 
 const disc2Songs = [
   {
-    title: "ルサンチマン",
-    src: "songs/song6.mp3",
+    title: "イリヤ",
+    src: "songs/iriya 7.mp3",
     image: "images/song6.JPG"
   },
   {
-    title: "大人",
-    src: "songs/song7.mp3",
+    title: "プラグマ",
+    src: "songs/cul 6.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -61,13 +61,13 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "感覚は",
-    src: "songs/song9.mp3",
+    title: "relief",
+    src: "songs/good de 3.mp3",
     image: "images/song6.JPG"
   },
   {
-    title: "プラグマ",
-    src: "songs/cul 6.mp3",
+    title: "ルサンチマン",
+    src: "songs/song6.mp3",
     image: "images/song6.JPG"
   }
 ];

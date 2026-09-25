@@ -14,27 +14,27 @@ const disc1Songs = [
   {
     title: "me not me",
     src: "songs/song1.mp3",
-    image: "images/IMG_8865.JPG?v=2"
+    image: "images/song6.JPG"
   },
   {
-    title: "詩的表現",
-    src: "songs/song2.mp3",
-    image: "images/song2.JPG"
+    title: "感覚は",
+    src: "songs/song9.mp3",
+    image: "images/song6.JPG"
   },
   {
     title: "口笛",
     src: "songs/song3.mp3",
-    image: "images/song3.JPG"
+    image: "images/song6.JPG"
   },
   {
-    title: "光より",
-    src: "songs/song4.mp3",
-    image: "images/song4.jpg"
+    title: "探求",
+    src: "songs/hannnaobachann ru5.mp3",
+    image: "images/song6.jpg"
   },
   {
-    title: "灯某",
-    src: "songs/song5.mp3",
-    image: "images/song5.JPG"
+    title: "ルサンチマン",
+    src: "songs/song6.mp3",
+    image: "images/song6.JPG"
   }
 ];
 
@@ -66,9 +66,9 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "ルサンチマン",
+    title: "知っている！",
     src: "songs/song6.mp3",
-    image: "images/song6.JPG"
+    image: "images/ph 6.JPG"
   }
 ];
 

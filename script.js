@@ -12,8 +12,8 @@ const correctPassword = "918hm";
 
 const disc1Songs = [
   {
-    title: "大人",
-    src: "songs/song7.mp3",
+    title: "朝",
+    src: "songs/anataha 3.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -47,7 +47,7 @@ const disc1Songs = [
 const disc2Songs = [
   {
     title: "イリヤ",
-    src: "songs/iriya 8.mp3",
+    src: "songs/iriya 12.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -62,7 +62,7 @@ const disc2Songs = [
   },
   {
     title: "開花",
-    src: "songs/konoha 7.mp3",
+    src: "songs/konoha 9.mp3",
     image: "images/song6.JPG"
   },
   {

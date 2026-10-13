@@ -17,8 +17,8 @@ const disc1Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "感覚は",
-    src: "songs/song9.mp3",
+    title: "大人",
+    src: "songs/otona 8.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -62,7 +62,7 @@ const disc2Songs = [
   },
   {
     title: "開花",
-    src: "songs/konoha 9.mp3",
+    src: "songs/konoha 10.mp3",
     image: "images/song6.JPG"
   },
   {

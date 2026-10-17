@@ -12,8 +12,8 @@ const correctPassword = "918hm";
 
 const disc1Songs = [
   {
-    title: "朝",
-    src: "songs/anataha 3.mp3",
+    title: "イリヤ",
+    src: "songs/iriya 16.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -22,20 +22,20 @@ const disc1Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "口笛",
-    src: "songs/song3.mp3",
-    image: "images/song6.JPG"
-  },
-  {
-    title: "探求",
-    src: "songs/hannnaobachann ru5.mp3",
+    title: "プラグマ",
+    src: "songs/cul 7.mp3",
     image: "images/song6.JPG"
   },
   {
     title: "ルサンチマン",
     src: "songs/song6.mp3",
     image: "images/song6.JPG"
-  }
+  },
+  {
+    title: "知っている！",
+    src: "songs/ph 6.mp3",
+    image: "images/song6.JPG"
+  },
 ];
 
 
@@ -46,18 +46,13 @@ const disc1Songs = [
 
 const disc2Songs = [
   {
-    title: "イリヤ",
-    src: "songs/iriya 12.mp3",
+    title: "口笛",
+    src: "songs/song3.mp3",
     image: "images/song6.JPG"
   },
   {
-    title: "プラグマ",
-    src: "songs/cul 6.mp3",
-    image: "images/song6.JPG"
-  },
-  {
-    title: "relief",
-    src: "songs/good de 5.mp3",
+    title: "夢",
+    src: "songs/yumewomita.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -66,8 +61,13 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "知っている！",
-    src: "songs/ph 6.mp3",
+    title: "朝",
+    src: "songs/anataha 5.mp3",
+    image: "images/song6.JPG"
+  },
+  {
+    title: "relief",
+    src: "songs/good de 6.mp3",
     image: "images/song6.JPG"
   }
 ];

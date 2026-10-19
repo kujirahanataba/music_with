@@ -28,7 +28,7 @@ const disc1Songs = [
   },
   {
     title: "逸脱",
-    src: "songs/tennsaikamo 2.mp3",
+    src: "songs/tennsaikamo 5.mp3",
     image: "images/song6.JPG"
   },
   {

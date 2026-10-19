@@ -27,8 +27,8 @@ const disc1Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "ルサンチマン",
-    src: "songs/song6.mp3",
+    title: "逸脱",
+    src: "songs/tennsaikamo 2.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -46,6 +46,11 @@ const disc1Songs = [
 
 const disc2Songs = [
   {
+    title: "ルサンチマン",
+    src: "songs/song6.mp3",
+    image: "images/song6.JPG"
+  },
+  {
     title: "口笛",
     src: "songs/song3.mp3",
     image: "images/song6.JPG"
@@ -56,18 +61,13 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "開花",
-    src: "songs/konoha 10.mp3",
-    image: "images/song6.JPG"
-  },
-  {
     title: "朝",
     src: "songs/anataha 5.mp3",
     image: "images/song6.JPG"
   },
   {
-    title: "relief",
-    src: "songs/good de 6.mp3",
+    title: "開花",
+    src: "songs/konoha 10.mp3",
     image: "images/song6.JPG"
   }
 ];

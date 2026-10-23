@@ -27,8 +27,8 @@ const disc1Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "ルサンチマン",
-    src: "songs/song6.mp3",
+    title: "探求",
+    src: "songs/hannnaobachann 7.mp3",
     image: "images/song6.JPG"
   },
   {
@@ -46,8 +46,8 @@ const disc1Songs = [
 
 const disc2Songs = [
   {
-    title: "逸脱",
-    src: "songs/tennsaikamo 5.mp3",
+    title: "ルサンチマン",
+    src: "songs/song6.mp3",
     image: "images/song6.JPG"
   },
   {

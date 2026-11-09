@@ -61,8 +61,8 @@ const disc2Songs = [
     image: "images/song6.JPG"
   },
   {
-    title: "夢",
-    src: "songs/yumewomita.mp3",
+    title: "スモッグ",
+    src: "songs/3m aco.mp3",
     image: "images/song6.JPG"
   },
   {
